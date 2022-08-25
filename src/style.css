@@ -8,8 +8,12 @@ body {
 	border: 1px solid #dedede;
 	border-radius: 10px;
 }
+.weather-app-wrapper {
+	max-width: 600px;
+	margin: 30px auto;
+}
 h1 {
-	color: #d2e1ef;
+	color: #5299db;
 	font-size: 22px;
 	font-weight: 100;
 	line-height: 28px;
@@ -26,7 +30,7 @@ li {
 	margin: 0;
 	padding: 0;
 	color: #70757a;
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 19px;
 	font-weight: 100;
 }
