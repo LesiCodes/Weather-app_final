@@ -13,7 +13,7 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<link rel="stylesheet" href="src/style.css" />
-		<title>Weatherapp</title>
+		<title>Weather App</title>
 	</head>
 	<body>
 		<div class="container">
@@ -33,7 +33,7 @@
 							<div class="col-3">
 								<input
 									type="submit"
-									value="search"
+									value="Search"
 									class="btn btn-primary w-100"
 								/>
 							</div>
@@ -52,7 +52,10 @@
 								<img src="" alt="Clear" id="icon" />
 								<div>
 									<strong id="temperature"></strong
-									><span class="units"> °C| <a href="#">°F</a></span>
+									><span class="units">
+										<a href="#" id="celsius-link" class="active">°C</a>|
+										<a href="#" id="fahrenheit-link">°F</a></span
+									>
 								</div>
 							</div>
 						</div>
