@@ -20,6 +20,32 @@ function formaDate(timestamp) {
 	let day = days[date.getDay()];
 	return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+	let forecastElement = document.querySelector("#forecast");
+
+	let forecastHTML = `<div class="row">`;
+	let days = ["Thu", "Fri", "Sat", "Sun"];
+	days.forEach(function (day) {
+		forecastHTML =
+			forecastHTML +
+			`
+			<div class="col-2">
+				<div class="weather-forecast-date">${day}</div>
+					<img
+						src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+							alt=""
+								width="35"
+								/>
+						<div class="weather-forecast-temperatures">
+					<span class="weather-forecast-max">18°</span>
+				<span class="weather-forecast-min">12°</span>
+			</div>
+			`;
+	});
+
+	forecastHTML = forecastHTML + `</div>`;
+	forecastElement.innerHTML = forecastHTML;
+}
 
 function displayTemperature(response) {
 	let temperatureElement = document.querySelector("#temperature");
@@ -82,5 +108,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+displayForecast();
 
 search("Paris");
