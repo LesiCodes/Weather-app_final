@@ -50,6 +50,7 @@ li:first-letter {
 	background-color: #3c3f43;
 	border-color: #3c3f43;
 	color: #f69d3c;
+	box-shadow: 5px 5px 10px #494d52;
 }
 .btn:hover {
 	background-color: #f69d3c;
